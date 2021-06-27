@@ -21,7 +21,7 @@ class Networker {
   });
 
   // add api key here
-  final apiKey = '987d4a02f15aed097a27cbdd35877545';
+  final apiKey = '';
 
   // gets data based on location data
   Future<void> getData() async {
