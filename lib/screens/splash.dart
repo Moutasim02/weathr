@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:weathr/screens/home.dart';
 import 'package:weathr/utils/constants.dart';
-
-import 'my_home.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -18,7 +17,7 @@ class _SplashState extends State<Splash> {
 
     // nav to home.dart
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushNamed(context, MyHome.id);
+      Navigator.pushNamed(context, Home.id);
     });
   }
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:weathr/screens/home.dart';
-import 'package:weathr/screens/my_home.dart';
 import 'package:weathr/screens/splash.dart';
 
 void main() {
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
       home: const Splash(),
       routes: {
         Home.id: (ctx) => const Home(),
-        MyHome.id: (ctx) => const MyHome(),
       },
     );
   }
