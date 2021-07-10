@@ -8,25 +8,25 @@ class CloudyIconWidget extends StatelessWidget {
       // width: MediaQuery.of(context).size.width * 0.8,
       // height: MediaQuery.of(context).size.height * 0.25,
       /// to ensure proper size, for now
-      width: 400,
-      height: 150,
+      width: 370,
+      height: 120,
       child: Stack(
         children: [
           Positioned(
             child: SizedBox(
               child: Image.asset('assets/sun.png'),
-              height: 150,
-              width: 150,
+              height: 80,
+              width: 80,
             ),
-            left: 120,
+            left: 110,
           ),
           Positioned(
             child: SizedBox(
               child: Image.asset('assets/cloud.png'),
-              height: 200,
-              width: 200,
+              height: 80,
+              width: 150,
             ),
-            right: 50,
+            right: 90,
           )
         ],
       ),
