@@ -19,7 +19,6 @@ class _HomeState extends State<Home> {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Row(
@@ -39,15 +38,15 @@ class _HomeState extends State<Home> {
                       fontSize: 20,
                     ),
                   ),
-                  Spacer(),
-                  FaIcon(
+                  const Spacer(),
+                  const FaIcon(
                     FontAwesomeIcons.calendarAlt,
                   ),
                 ],
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-              Center(child: CloudyIconWidget()),
-              SizedBox(
+              const Center(child: CloudyIconWidget()),
+              const SizedBox(
                 height: 30,
               ),
               Column(
@@ -59,7 +58,7 @@ class _HomeState extends State<Home> {
                       fontSize: 45,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
@@ -69,12 +68,12 @@ class _HomeState extends State<Home> {
                       fontSize: 45,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       FaIcon(
                         FontAwesomeIcons.wind,
                         color: Colors.black54,
@@ -84,7 +83,7 @@ class _HomeState extends State<Home> {
                         ' 8 km/hr',
                         style: TextStyle(),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 40,
                       ),
                       FaIcon(

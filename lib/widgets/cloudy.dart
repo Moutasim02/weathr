@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+
 class CloudyIconWidget extends StatelessWidget {
   const CloudyIconWidget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.8,
-      height: MediaQuery.of(context).size.height * 0.25,
+      // width: MediaQuery.of(context).size.width * 0.8,
+      // height: MediaQuery.of(context).size.height * 0.25,
+      /// to ensure proper size, for now
+      width: 400,
+      height: 150,
       child: Stack(
         children: [
           Positioned(
@@ -14,7 +18,7 @@ class CloudyIconWidget extends StatelessWidget {
               height: 150,
               width: 150,
             ),
-            left: 50,
+            left: 120,
           ),
           Positioned(
             child: SizedBox(
@@ -25,7 +29,7 @@ class CloudyIconWidget extends StatelessWidget {
             right: 50,
           )
         ],
-      )
+      ),
     );
   }
 }
