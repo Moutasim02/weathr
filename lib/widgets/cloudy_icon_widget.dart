@@ -15,7 +15,7 @@ class CloudyIconWidget extends StatelessWidget {
           Positioned(
             child: SizedBox(
               child: Image.asset('assets/sun.png'),
-              height: 80,
+              height: 70,
               width: 80,
             ),
             left: 110,
@@ -25,6 +25,14 @@ class CloudyIconWidget extends StatelessWidget {
               child: Image.asset('assets/cloud.png'),
               height: 80,
               width: 150,
+            ),
+            right: 90,
+          ),
+          Positioned(
+            child: SizedBox(
+              child: Image.asset('assets/Group 3.png'),
+              height: 50,
+              width: 70,
             ),
             right: 90,
           )

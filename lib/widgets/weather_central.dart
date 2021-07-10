@@ -19,7 +19,7 @@ class WeatherCentral extends StatelessWidget {
         Text(
           'Cloudy',
           style: TextStyle(
-            color: Colors.grey[800],
+            color: Color(0xFF616161),
             fontSize: 35,
           ),
         ),
@@ -29,7 +29,7 @@ class WeatherCentral extends StatelessWidget {
         Text(
           '28 °',
           style: TextStyle(
-            color: Colors.grey[800],
+            color: Color(0xFF616161),
             fontSize: 35,
           ),
         ),
@@ -41,12 +41,13 @@ class WeatherCentral extends StatelessWidget {
           children: const [
             FaIcon(
               FontAwesomeIcons.wind,
-              color: Colors.black54,
-              size: 25,
+              color: Color(0xFF616161),
+              size: 20,
             ),
             Text(
               ' 8 km/hr',
               style: TextStyle(
+                color: Color(0xFF616161),
                 fontSize: 20,
               ),
             ),
@@ -55,12 +56,13 @@ class WeatherCentral extends StatelessWidget {
             ),
             FaIcon(
               FontAwesomeIcons.tint,
-              color: Colors.black54,
-              size: 25,
+              color: Color(0xFF616161),
+              size: 20,
             ),
             Text(
               ' 47 %',
               style: TextStyle(
+                color: Color(0xFF616161),
                 fontSize: 20,
               ),
             ),

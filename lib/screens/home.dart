@@ -37,19 +37,25 @@ class _HomeState extends State<Home> {
                   children: [
                     const Icon(
                       Icons.pin_drop,
+                      color: Color(0xFF616161),
                     ),
                     Text(
-                      'San Francisco',
+                      ' San Francisco',
                       style: TextStyle(
-                        color: Colors.grey[800],
+                        color: Color(0xFF616161),
                         fontSize: 20,
                       ),
+                    ),
+                    Icon(
+                      Icons.arrow_drop_down,
+                      color: Color(0xFF616161),
                     ),
                     const Spacer(),
                     IconButton(
                       splashColor: Colors.indigoAccent,
                       icon: const FaIcon(
                         FontAwesomeIcons.calendarAlt,
+                        color: Color(0xFF616161),
                       ),
                       onPressed: () {
                         weatherDetailsCityName = 'San Fransisco';
@@ -65,7 +71,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              const SizedBox(height: 70),
+              const SizedBox(height: 40),
               const WeatherCentral(),
               const SizedBox(
                 height: 130,
@@ -93,6 +99,12 @@ class _HomeState extends State<Home> {
                       time: '11:00 AM',
                       temp: 35,
                       weatherCode: 800,
+                    ),
+                    SlideTile(
+                      dayAndDate: 'Tuesday, 20 June',
+                      time: '10:00 AM',
+                      temp: 30,
+                      weatherCode: 100,
                     ),
                   ],
                 ),

@@ -78,8 +78,9 @@ class ContainerTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 150,
-      width: 140,
+      width: 120,
       decoration: BoxDecoration(
+        color: Colors.white10,
         border: Border.all(
           color: Colors.white,
           width: 2,
@@ -96,7 +97,8 @@ class ContainerTile extends StatelessWidget {
             Text(
               time,
               style: const TextStyle(
-                fontSize: 15,
+                  color: Color(0xFF616161),
+                  fontSize: 15,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -114,6 +116,7 @@ class ContainerTile extends StatelessWidget {
               temp + '°',
               textAlign: TextAlign.center,
               style: const TextStyle(
+                color: Color(0xFF616161),
                 fontWeight: FontWeight.w700,
                 fontSize: 25,
               ),
