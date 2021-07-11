@@ -8,6 +8,7 @@ Color niceLightBlue = const Color(0xff4be2e3);
 Color niceDarkGrey = const Color(0xff405c63);
 Color niceLightGrey = const Color(0xffdae0e1);
 Color niceGreen = const Color(0xff7f863e);
+Color customLightBlue = const Color(0xff5BD4FC);
 
 const bigFont = TextStyle(fontSize: 50);
 const medFont = TextStyle(fontSize: 25);

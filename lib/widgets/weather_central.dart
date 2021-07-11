@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'cloudy_icon_widget.dart';
 
-class WeatherCentral extends StatelessWidget {
-  const WeatherCentral({Key? key}) : super(key: key);
+class CentralWeatherWidget extends StatelessWidget {
+  const CentralWeatherWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

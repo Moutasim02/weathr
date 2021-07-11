@@ -35,7 +35,7 @@ class SlideTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: SizedBox(
-        height: 180,
+        height: 190,
         child: Column(
           children: [
             Text(

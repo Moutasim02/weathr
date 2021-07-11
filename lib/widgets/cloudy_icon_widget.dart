@@ -31,7 +31,7 @@ class CloudyIconWidget extends StatelessWidget {
           ),
           Positioned(
             child: SizedBox(
-              child: Image.asset('assets/Group 3.png'),
+              child: Image.asset('assets/wind_pic.png'),
               height: 50,
               width: 70,
             ),
