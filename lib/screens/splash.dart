@@ -16,9 +16,12 @@ class _SplashState extends State<Splash> {
     super.initState();
 
     // nav to home.dart
-    Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushNamed(context, Home.id);
-    });
+    Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        Navigator.pushNamed(context, Home.id);
+      },
+    );
   }
 
   @override

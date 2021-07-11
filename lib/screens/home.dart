@@ -1,7 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:weathr/screens/weather_details.dart';
+import 'package:weathr/utils/constants.dart';
+import 'package:weathr/widgets/slide_tile.dart';
+import 'package:weathr/widgets/weather_central.dart';
 
 class Home extends StatefulWidget {
   static String id = 'home';
+
   const Home({Key? key}) : super(key: key);
 
   @override
@@ -12,56 +20,98 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[300],
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Column(
+      backgroundColor: const Color(0xff5BD4FC),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              Icon(
-                Icons.pin_drop,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20.0,
+                  vertical: 10,
+                ),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.pin_drop,
+                      color: Color(0xFF616161),
+                    ),
+                    const Text(
+                      ' San Francisco',
+                      style: TextStyle(
+                        color: Color(0xFF616161),
+                        fontSize: 20,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down,
+                      color: Color(0xFF616161),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      splashColor: Colors.indigoAccent,
+                      icon: const FaIcon(
+                        FontAwesomeIcons.calendarAlt,
+                        color: Color(0xFF616161),
+                      ),
+                      onPressed: () {
+                        weatherDetailsCityName = 'San Fransisco';
+                        Navigator.push(
+                          context,
+                          PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: const WeatherDetails(),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ),
+              const SizedBox(height: 40),
+              const WeatherCentral(),
+              const SizedBox(
+                height: 130,
+              ),
+              SizedBox(
+                height: 300,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  children: [
+                    SlideTile(
+                      dayAndDate: 'Monday, 19 June',
+                      time: '9:00 AM',
+                      temp: 28,
+                      weatherCode: 800,
+                    ),
+                    SlideTile(
+                      dayAndDate: 'Tuesday, 20 June',
+                      time: '10:00 AM',
+                      temp: 30,
+                      weatherCode: 100,
+                    ),
+                    SlideTile(
+                      dayAndDate: 'Wednesday, 21 June',
+                      time: '11:00 AM',
+                      temp: 35,
+                      weatherCode: 800,
+                    ),
+                    SlideTile(
+                      dayAndDate: 'Tuesday, 20 June',
+                      time: '10:00 AM',
+                      temp: 30,
+                      weatherCode: 100,
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(14.0),
-            child: Row(
-              children: [
-                Text(
-                  'San Francisco',
-                  style: TextStyle(
-                    color: Colors.grey[800],
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 320),
-            child: Icon(
-              Icons.calendar_today_rounded,
-            ),
-          ),
-          Center(
-            child: Text(
-              'Cloudy',
-              style: TextStyle(
-                color: Colors.grey[800],
-                fontSize: 45,
-              ),
-            ),
-          ),
-          Text(
-            '28 °',
-            style: TextStyle(
-              color: Colors.grey[800],
-              fontSize: 45,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
